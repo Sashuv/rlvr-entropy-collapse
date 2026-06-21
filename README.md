@@ -1,7 +1,7 @@
 # Entropy collapse in RLVR
 
 A small, self-contained notebook that reproduces **entropy collapse** in reinforcement
-learning with verifiable rewards (RLVR) — and the covariance mechanism behind it — in a
+learning with verifiable rewards (RLVR) and the covariance mechanism behind it in a
 setting tiny enough to check by hand.
 
 Instead of a full language model, the policy here is a softmax over `K` possible answers
@@ -14,7 +14,7 @@ reported for real RLVR runs.
 The notebook (`RLVR_Entropy_experiment.ipynb`) walks through four experiments:
 
 1. **Watch it collapse.** Policy entropy falls smoothly and monotonically from `log K`
-   toward zero while performance rises — nothing in the objective asks for this; it is a
+   toward zero while performance rises, nothing in the objective asks for this; it is a
    side effect of the updates.
 2. **The mechanism is a covariance.** The entropy change per step equals a covariance
    between log-probability and advantage, and that covariance stays positive, so entropy
